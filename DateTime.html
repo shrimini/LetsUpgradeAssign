@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>JS Assignment</title>
+    </head>
+    <body>
+        <h1>Javascript Assignment Day2 Question 1 </h1>
+        <script>
+            var d=new Date();
+            var day=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            document.write("Today is : "+day[d.getDay()]+".<br/>");
+            var hour=d.getHours()-12;
+            var m=d.getHours()>=12?'PM':'AM'
+            document.write("Current Time is : "+hour+":"+d.getMinutes()+":"+d.getSeconds()+" "+m+".");
+        </script>
+
+    </body>
+</html>
