@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Var Let Const Keywords</title>
+    </head>
+    <body>
+        <h1>Difference between Var,Let and Const keywords</h1>
+        <script>
+
+        //var is used to define variables globally
+
+        var name="LetsUpgrade";
+        console.log(name);
+
+        var fruits=["Apple","Mango","Cherry"];
+        console.log(fruits);
+        
+        //let is used to define variables in a scope.let is used when we want to declare variables inside a scope
+
+        function myfun(){
+            let name="Javascript";
+            console.log(name);
+        }
+
+        //const is used to define constant variables. Constant variables cannot be reassigned
+
+        const city="Mumbai";
+        console.log(city);
+        city=10 //this gives error 
+
+        </script>
+
+    </body>
+</html>
