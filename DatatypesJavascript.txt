@@ -1,0 +1,20 @@
+Datatypes in Javascript
+
+string : everything inside " "(double quotes),' '(single quotes) are considered as string values. We use '+' operator to append string values.
+eg. var a="apple";
+      var b=" is a fruit";
+      var c=a+b;        //apple is a fruit
+
+number : All the numbers from -(2^53-1) to (2^53-1) are number datatype. 
+eg. var a=10;
+
+boolean : This datatype gives output as True or False 
+
+null : used when we intentionally want to define a variable as empty  
+eg. let emp=null;
+
+undefined : A variable that have not assigned 
+eg. let a;
+
+list : collection of data items. Defined using [](brackets)
+eg. let lis=["flowers","Fruits","Trees"];
