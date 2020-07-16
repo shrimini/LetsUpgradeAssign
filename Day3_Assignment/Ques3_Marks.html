@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Day 3</title>
+</head>
+<body>
+    <h1>Question 3 Marks </h1>
+    <script>
+        //Using If-Else statement
+
+        let marks=+prompt("Enter your marks ");
+        
+        if(marks>=80) {
+            console.log("You got A grade :)");
+        } else if(marks>=65 || marks<=79) {
+            console.log("You get B grade ^-^");
+        }else if(marks>=40 || marks<=64){ 
+            console.log("You got C grade >.<");
+        }else{console.log("You are Failed.....")}
+        
+
+        //Using Switch case
+
+        
+        switch (true) {
+            case marks>=80:
+                console.log("You got A grade :)");
+                break;
+            case (marks>=65 || marks<=79):
+                console.log("You get B grade ^-^");
+                break;
+            case (marks>=40 || marks<=64):
+                console.log("You got C grade");
+                break;
+            default:
+                console.log("You Failed....");
+                break;
+        }
+        
+
+        //Using Ternary Operator
+        
+        let result=(marks>=80)?'A grade':(marks>=65||marks<=79) ? 'B grade' :(marks>=40 || marks<=64) ?'C grade':'You are failed...';
+        console.log(result);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Day 3</title>
+</head>
+<body>
+    <h1>Question 1 Even OR Odd</h1>
+    <script>
+        let EvenOdd=function(num=0){
+                if(num%2==0){
+                    return "even";
+                }
+                else{
+                    return "odd";
+                }    
+        }
+        let num= +prompt("Enter a number");
+
+        let result=EvenOdd(num);
+        if(result=='even'){
+            console.log(`The number ${num} is Even`);
+
+        }
+        else{
+            console.log(`The number ${num} is odd`);
+        }
+
+    </script>
+</body>
+</html>
