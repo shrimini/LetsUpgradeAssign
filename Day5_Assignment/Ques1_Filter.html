@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 Assignment</title>
+</head>
+<body>
+    <h1>Question 1 Fiter </h1>
+    <script>
+        let num=Math.abs(prompt("Enter a number "));
+        let arr=[];
+        for (let i = 0; i < num; i++){arr.push(i)};
+        var filarr = arr.filter(e=>(e%2)!==0).map(e=>e**3);
+        console.log(filarr);
+
+    </script>
+</body>
+</html>
