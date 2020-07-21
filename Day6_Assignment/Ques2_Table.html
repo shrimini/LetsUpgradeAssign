@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Assignment</title>
+</head>
+<body>
+    <h1>Question 2 Print Table</h1>
+    <br/><br/>
+    <script>
+        
+        function print(){
+            var pr=document.getElementById('table');
+            let num=Number(document.getElementById('n').value);
+            for(let i;i<=10;i++){
+                pr.innerHTML+=num+"*"+i+"="+(num*i)+"<br/>";
+            }
+            
+        }
+    </script>
+    Enter a number :<input type="number" id='n'><br/>
+    <p id='table'></p>
+    <button onclick="print()" >Click</button>
+
+    
+</body>
+</html>
