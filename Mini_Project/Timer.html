@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project JS Essentials</title>
+    <link rel='stylesheet' href="timer.css"/>
+</head>
+<body>
+    <div class="buton">
+        <button onclick="stop()" class="btn">Click to Start</button>
+    </div>
+    <div class="circontainer">
+        
+        <div class='circle'>
+            <div class="time">
+               <p id="hr" class="timer">00</p>
+               <p id="min" class="timer">00</p>
+               <p id="sec" class="timer">00</p>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        
+        function stop(){
+            let inp=prompt("Enter time in hh:mm:ss format");
+
+            var ld=inp.split(':');
+            let d=new Date();
+            let h=d.getHours()+Number(ld[0]);
+            let m=d.getMinutes()+Number(ld[1]);
+            let s=d.getSeconds()+Number(ld[2]);
+            var user=[h,m,s];            
+            let arr=[d.getFullYear(),d.getMonth()+1,d.getDate(),...user];
+
+            var counter = setInterval(function() {
+            
+                var countd = new Date(...arr).getTime();
+                console.log(countd);
+                var now = new Date().getTime();
+    
+                var distance = countd - now;
+                console.log(distance);
+                
+
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById("hr").innerHTML=hours;
+                document.getElementById("min").innerHTML=minutes;
+                document.getElementById("sec").innerHTML=seconds;
+
+
+                if(seconds==0 && minutes==0 && hours==0) {
+                    clearInterval(counter);
+                    alert("Your Timer Ended :\)")
+                    document.body.style.backgroundColor = 'black';
+                }
+    },1000);
+
+    }
+    </script>
+</body>
+</html>
